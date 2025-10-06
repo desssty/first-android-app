@@ -13,3 +13,19 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Gradle
+.gradle/
+build/
+
+# Android Studio
+.idea/
+*.hprof
+
+# Log files
+*.log
+
+# APKs and binaries
+*.apk
+*.keystore
+
