@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Лаба2</string>
+    <string name="first_activity_title">Первая Активность</string>
+    <string name="second_activity_title">Вторая Активность</string>
+    <string name="cat_list_title">Список котов</string>
+    <string name="cat_detail_title">Детали кота</string>
+    <string name="fragment_activity_title">Фрагмент</string>
+    <string name="button_timer">Таймер</string>
+    <string name="button_list">Список</string>
+    <string name="button_fragment">Фрагмент</string>
+    <string name="button_return">Вернуться</string>
+    <string name="time_message">Вы были во второй активности: %1$.2f секунд</string>
+    <string name="cat_breed_placeholder">Порода: -</string>
+    <string name="selected_cat">Вы выбрали кота: %1$s</string>
+    <string name="selected_breed">Порода: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
