@@ -18,30 +18,30 @@ git clone https://github.com/desssty/first-android-app.git
 
 ```bash
 app/src/main
-|-- java/com/example/laba2
-|  |-- model
-|  |  |-- Breed.java            # класс модели породы кошки
-|  |  |-- Cat.java              # класс модели кота
+|-- java/com/example/laba2           # исходный Java-код приложения
+|  |-- model                         # модели данных
+|  |  |-- Breed.java                 # класс модели породы кошки
+|  |  |-- Cat.java                   # класс модели кота
 |
-|  |-- adapter
-|  |  |-- CatAdapter.java       # адаптер для списка котов (RecyclerView)
+|  |-- adapter                       # адаптеры для списков
+|  |  |-- CatAdapter.java            # адаптер для списка котов (RecyclerView)
 |
-|  |-- ui
-|  |  |-- activity
+|  |-- ui                            # пользовательский интерфейс
+|  |  |-- activity                   # экраны-приложения
 |  |  |  |-- MainActivity.java       # главная активность (точка входа)
 |  |  |  |-- SecondActivity.java     # вторая активность (таймер)
 |  |  |  |-- CatalogActivity.java    # экран каталога котов
 |  |  |  |-- CatDetailActivity.java  # экран деталей кота
 |  |
-|  |  |-- fragments
+|  |  |-- fragments                  # фрагменты интерфейса
 |  |  |  |-- FirstFragment.java      # первый фрагмент
 |  |  |  |-- SecondFragment.java     # второй фрагмент
 |
-|-- res
-|  |-- drawable
+|-- res                              # ресурсы приложения (UI)
+|  |-- drawable                      # изображения и графика
 |  |  |-- cat_image.jpg              # изображение кота
 |
-|  |-- layout
+|  |-- layout                        # xml-разметки экранов и элементов UI
 |  |  |-- activity_catalog.xml       # разметка экрана каталога
 |  |  |-- activity_cat_detail.xml    # разметка экрана деталей кота
 |  |  |-- activity_main.xml          # разметка главной активности
@@ -50,12 +50,12 @@ app/src/main
 |  |  |-- fragment_second.xml        # разметка второго фрагмента
 |  |  |-- recyclerview_item.xml      # разметка элемента списка (RecyclerView)
 |
-|  |-- values
+|  |-- values                        # общие значения (цвета, строки, темы)
 |  |  |-- colors.xml                 # цвета приложения
 |  |  |-- strings.xml                # строковые ресурсы (тексты)
 |  |  |-- themes.xml                 # тема (светлая)
 |
-|  |-- values-night
+|  |-- values-night                  # значения для тёмной темы
 |  |  |-- themes.xml                 # тема (тёмная, ночной режим)
 ```
 
