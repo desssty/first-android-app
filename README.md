@@ -59,4 +59,4 @@ app/src/main
 |  |  |-- themes.xml                 # тема (тёмная, ночной режим)
 ```
 
-Подробно о файлах в папке [docs](https://github.com/desssty/first-android-app/tree/main/docs)
+Подробно о файлах в папке [docs](https://github.com/desssty/first-android-app/tree/master/docs/)
