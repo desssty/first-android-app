@@ -1,10 +1,12 @@
-package com.example.laba2;
+package com.example.laba2.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.laba2.R;
 
 public class SecondActivity extends AppCompatActivity {
     private long startTime;

@@ -1,4 +1,4 @@
-package com.example.laba2;
+package com.example.laba2.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

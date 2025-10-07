@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laba2">
         <activity
-            android:name=".FragmentActivity"
+            android:name=".ui.activity.FragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".CatDetailActivity"
+            android:name=".ui.activity.CatDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".CatalogActivity"
+            android:name=".ui.activity.CatalogActivity"
             android:exported="false" />
         <activity
             android:name=".ThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".ui.activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

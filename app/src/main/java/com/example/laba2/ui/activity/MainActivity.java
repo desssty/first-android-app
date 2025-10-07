@@ -1,4 +1,4 @@
-package com.example.laba2;
+package com.example.laba2.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.laba2.R;
 
 public class MainActivity extends AppCompatActivity {
 

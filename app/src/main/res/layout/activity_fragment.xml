@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="16dp"
-    tools:context=".FragmentActivity">
+    tools:context=".ui.activity.FragmentActivity">
 
     <TextView
         android:id="@+id/catalogTitle"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fragmentContainerView2"
-        android:name="com.example.laba2.FirstFragment"/>
+        android:name="com.example.laba2.ui.fragments.FirstFragment"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/buttonBack2"
-        android:name="com.example.laba2.SecondFragment"/>
+        android:name="com.example.laba2.ui.fragments.SecondFragment"/>
 
 
     <Button

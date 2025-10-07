@@ -1,8 +1,12 @@
-package com.example.laba2;
+package com.example.laba2.ui.activity;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
+
+import com.example.laba2.R;
+import com.example.laba2.ui.fragments.FirstFragment;
+import com.example.laba2.ui.fragments.SecondFragment;
 
 public class FragmentActivity extends AppCompatActivity implements FirstFragment.OnFragmentSendDataListener {
 

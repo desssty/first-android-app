@@ -1,4 +1,4 @@
-package com.example.laba2;
+package com.example.laba2.ui.activity;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,6 +6,11 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.laba2.R;
+import com.example.laba2.adapter.CatAdapter;
+import com.example.laba2.model.Breed;
+import com.example.laba2.model.Cat;
 
 import java.util.ArrayList;
 import java.util.List;
