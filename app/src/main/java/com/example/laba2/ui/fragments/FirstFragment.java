@@ -5,27 +5,35 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.laba2.R;
+
+import java.util.Arrays;
+import java.util.List;
+import com.example.laba2.adapter.ItemAdapter;
 
 public class FirstFragment extends Fragment {
 
     public interface OnFragmentSendDataListener {
         void onSendData(String data);
     }
-    private OnFragmentSendDataListener fragmentSendDataListener;
 
-    private ListView listView;
+    private OnFragmentSendDataListener fragmentSendDataListener;
+    private RecyclerView recyclerView;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        fragmentSendDataListener = (OnFragmentSendDataListener) context;
+        if (context instanceof OnFragmentSendDataListener) {
+            fragmentSendDataListener = (OnFragmentSendDataListener) context;
+        } else {
+            throw new ClassCastException(context + " must implement OnFragmentSendDataListener");
+        }
     }
 
     @Nullable
@@ -34,16 +42,18 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
 
-        listView = view.findViewById(R.id.listView);
-        String[] items = {"Элемент 1", "Элемент 2", "Элемент 3", "Элемент 4"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),
-                android.R.layout.simple_list_item_1, items);
-        listView.setAdapter(adapter);
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        listView.setOnItemClickListener((parent, v, position, id) -> {
-            String selectedItem = (String) parent.getItemAtPosition(position);
-            fragmentSendDataListener.onSendData(selectedItem);
+        List<String> items = Arrays.asList("Элемент 1", "Элемент 2", "Элемент 3", "Элемент 4", "Элемент 5", "Элемент 6", "Элемент 7", "Элемент 8", "Элемент 9", "Элемент 10");
+
+        ItemAdapter adapter = new ItemAdapter(items, item -> {
+            if (fragmentSendDataListener != null) {
+                fragmentSendDataListener.onSendData(item);
+            }
         });
+
+        recyclerView.setAdapter(adapter);
 
         return view;
     }

@@ -24,7 +24,6 @@ public class SecondFragment extends Fragment {
         return view;
     }
 
-    // Метод для обновления текста из Activity
     public void setSelectedItem(String data) {
         if (textView != null) {
             textView.setText(data);
