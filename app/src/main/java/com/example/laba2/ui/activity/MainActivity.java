@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonTimer;
     private Button buttonList;;
     private Button buttonFragment;
+    private Button buttonDatabase;
 
     private final ActivityResultLauncher<Intent> secondActivityLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -39,10 +40,12 @@ public class MainActivity extends AppCompatActivity {
         buttonTimer = findViewById(R.id.buttonTimer);
         buttonList = findViewById(R.id.buttonList);
         buttonFragment = findViewById(R.id.buttonFragment);
+        buttonDatabase = findViewById(R.id.buttonDatabase);
 
         buttonTimer.setText(R.string.button_timer);
         buttonList.setText(R.string.button_list);
         buttonFragment.setText(R.string.button_fragment);
+        buttonDatabase.setText(R.string.button_database);
 
         buttonTimer.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
@@ -56,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
         buttonFragment.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+            startActivity(intent);
+        });
+
+        buttonDatabase.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, UserActivity.class);
             startActivity(intent);
         });
     }
