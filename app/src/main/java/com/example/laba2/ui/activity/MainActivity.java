@@ -1,5 +1,6 @@
 package com.example.laba2.ui.activity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonList;;
     private Button buttonFragment;
     private Button buttonDatabase;
+    private Button buttonNavigation;
 
     private final ActivityResultLauncher<Intent> secondActivityLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -41,9 +43,11 @@ public class MainActivity extends AppCompatActivity {
         buttonList = findViewById(R.id.buttonList);
         buttonFragment = findViewById(R.id.buttonFragment);
         buttonDatabase = findViewById(R.id.buttonDatabase);
+        buttonNavigation = findViewById(R.id.buttonNavigation);
 
         buttonTimer.setText(R.string.button_timer);
         buttonList.setText(R.string.button_list);
+        buttonNavigation.setText("Навигация");
         buttonFragment.setText(R.string.button_fragment);
         buttonDatabase.setText(R.string.button_database);
 
@@ -64,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
         buttonDatabase.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, UserActivity.class);
+            startActivity(intent);
+        });
+
+        buttonNavigation.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
             startActivity(intent);
         });
     }
